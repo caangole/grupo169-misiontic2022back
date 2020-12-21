@@ -336,7 +336,7 @@ export default {
             'descripcion': this.editedItem.descripcion,
             'precio_venta': this.editedItem.precio_venta,
             'stock': this.editedItem.stock,
-            'categoriaId': this.editedItem.categoriaId
+            'categoriaId': this.categoria.id
           })
             .then(response =>{
               this.list();
@@ -353,7 +353,7 @@ export default {
             'descripcion': this.editedItem.descripcion,
             'precio_venta': this.editedItem.precio_venta,
             'stock': this.editedItem.stock,
-            'categoriaId': this.editedItem.categoriaId
+            'categoriaId': this.categoria.id
           })
             .then(response =>{
               this.list();
