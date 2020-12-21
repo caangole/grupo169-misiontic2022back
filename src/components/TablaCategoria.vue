@@ -5,6 +5,8 @@
     :items="categorias"
     sort-by="id"
     class="elevation-1"
+    loading
+    loading-text="Cargando... Un momento por favor."
   >
     <template v-slot:top>
       <v-toolbar
