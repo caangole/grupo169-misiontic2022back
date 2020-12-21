@@ -270,6 +270,7 @@ export default {
 
       editItem (item) {
         this.editedId = item.id
+        this.categoria = item? item.categoria : '';
         this.editedItem = Object.assign({}, item)
         this.dialog = true
       },
