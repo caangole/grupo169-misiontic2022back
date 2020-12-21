@@ -5,7 +5,7 @@
     :items="servicios"
     sort-by="id"
     class="elevation-1"
-    loading
+    :loading="carga"
     loading-text="Cargando... Un momento por favor."
   >
     <template v-slot:top>
@@ -153,6 +153,7 @@ export default {
     data: () => ({
       dialog: false,
       dialogChangeState: false,
+      carga: true,
       headers: [
         {text: 'ID', value: 'id'},
         {
@@ -206,6 +207,7 @@ export default {
         axios.get('https://grupo169-misiontic2022.herokuapp.com/api/servicio/list')
         .then(response =>{
           this.servicios = response.data;
+          this.carga = false;
         })
         .catch(error=>{
           console.log(error);
