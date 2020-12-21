@@ -36,7 +36,7 @@
         </v-list-item>
   
         <v-list-group
-          prepend-icon="mdi-account-circle"
+          prepend-icon="work"
         >
   
             <template v-slot:activator>
@@ -59,11 +59,11 @@
           </v-list-group>
   
           <v-list-group
-          prepend-icon="mdi-account-circle"
+          prepend-icon="mdi-key-chain"
           >
             <template v-slot:activator>
               <v-list-item-content>
-                <v-list-item-title>Actions</v-list-item-title>
+                <v-list-item-title>Permisos</v-list-item-title>
               </v-list-item-content>
             </template>
   
@@ -104,12 +104,12 @@ export default {
 
   data: () => ({
     admins: [
-        ['Categoría', 'mdi-account-multiple-outline', 'Categoria'],
-        ['Artículo', 'mdi-account-multiple-outline', 'Articulo'],
-        ['Servicio', 'mdi-account-multiple-outline', 'Servicio'],
+        ['Categoría', 'category', 'Categoria'],
+        ['Artículo', 'mdi-dots-grid', 'Articulo'],
+        ['Servicio', 'mdi-face-agent', 'Servicio'],
       ],
       cruds: [
-        ['Usuarios', 'mdi-plus-outline', 'Usuario'],
+        ['Usuarios', 'mdi-account-group', 'Usuario'],
       ],  
   }),
 };
