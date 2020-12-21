@@ -218,67 +218,14 @@ export default {
         this.dialog = true
       },
 
-    //   changeStateItem (item) {
-    //     this.editedId = item.id
-    //     this.editedItem = Object.assign({}, item)
-    //     this.dialogChangeState = true
-    //   },
-
-    //   changeStateItemConfirm () {
-
-    //     if (this.editedItem.estado === 1) {
-    //       //put
-    //       axios.put('https://grupo169-misiontic2022.herokuapp.com/api/articulo/deactivate', {
-    //         'id': this.editedId,
-    //       })
-    //         .then(response =>{
-    //           this.list();
-    //         })
-    //         .catch(error =>{
-    //           return error;
-    //         })
-    //     } else {
-    //       //post
-    //       axios.put('https://grupo169-misiontic2022.herokuapp.com/api/articulo/activate', {
-    //         'id': this.editedId,
-    //       })
-    //         .then(response =>{  
-    //           this.list();
-    //         })
-    //         .catch(error =>{
-    //           return error;
-    //         })
-    //     }
-
-    //     this.closeChangeState()
-    //   },
-
-    //   close () {
-    //     this.dialog = false
-    //     this.$nextTick(() => {
-    //       this.editedItem = Object.assign({}, this.defaultItem)
-    //       this.editedId = -1
-    //     })
-    //   },
-
-    //   closeChangeState () {
-    //     this.dialogChangeState = false
-    //     this.$nextTick(() => {
-    //       this.editedItem = Object.assign({}, this.defaultItem)
-    //       this.editedId = -1
-    //     })
-    //   },
-
       save () {
         if (this.editedId > -1) {
           //put
           axios.put('https://grupo169-misiontic2022.herokuapp.com/api/servicio/update', {
             'id': this.editedId,
-            'nombre':this.editedItem.nombre,
+            'titulo':this.editedItem.titulo,
             'descripcion': this.editedItem.descripcion,
-            'precio_venta': this.editedItem.precio_venta,
-            'stock': this.editedItem.stock,
-            'categoriaId': this.editedItem.categoriaId
+            'imagen': this.editedItem.imagen
           })
             .then(response =>{
               this.list();
@@ -289,13 +236,9 @@ export default {
         } else {
           //post
           axios.post('https://grupo169-misiontic2022.herokuapp.com/api/servicio/add', {
-            'estado': 1,
-            'codigo': this.editedItem.codigo,
-            'nombre':this.editedItem.nombre,
+            'titulo':this.editedItem.titulo,
             'descripcion': this.editedItem.descripcion,
-            'precio_venta': this.editedItem.precio_venta,
-            'stock': this.editedItem.stock,
-            'categoriaId': this.editedItem.categoriaId
+            'imagen': this.editedItem.imagen
           })
             .then(response =>{
               this.list();
