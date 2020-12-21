@@ -314,6 +314,7 @@ export default {
         this.dialog = false
         this.$nextTick(() => {
           this.editedItem = Object.assign({}, this.defaultItem)
+          this.categoria = ''
           this.editedId = -1
         })
       },
